@@ -1,1 +1,4 @@
 # NLTKDebugging
+To run this aboutme.py function on AWS lambda, upload Archive.zip to an S3 bucket. After uploading, create an AWS lambda function and past the S3 link URL under the Function code section. Under the Handler section paste 'aboutme.lambda_handler' so lambda knows which method to execute. Click save and then click test to execute function. Running this locally takes less than a second, running on AWS Lambda takes more than 10 seconds because of the wordnet.morphy() method.
+
+If you would like to change something, make your changes locally, and zip everything in the gitHubNLTKHelp directory. My zip is called Archive.zip. Next upload the zip to the S3 bucket again and upload the new link to the S3 under the Handler section in AWS Lambda.
